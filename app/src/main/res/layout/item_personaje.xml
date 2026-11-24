@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Widget.Material3.CardView.Elevated"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp"
+    android:layout_marginBottom="8dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardCornerRadius="12dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Aquí Glide pone la imagen que viene de la API -->
+        <ImageView
+            android:id="@+id/iv_foto"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:background="@color/fondo_imagen"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_imagen" />
+
+        <TextView
+            android:id="@+id/tv_nombre"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAppearance="?attr/textAppearanceTitleMedium"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_foto"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Rick Sanchez" />
+
+        <!-- Puntito de color según el estado (vivo, muerto, desconocido) -->
+        <View
+            android:id="@+id/v_estado"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/circulo"
+            android:importantForAccessibility="no"
+            app:layout_constraintBottom_toBottomOf="@id/tv_estado"
+            app:layout_constraintStart_toStartOf="@id/tv_nombre"
+            app:layout_constraintTop_toTopOf="@id/tv_estado" />
+
+        <TextView
+            android:id="@+id/tv_estado"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="12dp"
+            android:textAppearance="?attr/textAppearanceBodyMedium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/v_estado"
+            app:layout_constraintTop_toBottomOf="@id/tv_nombre"
+            tools:text="Vivo · Human" />
+
+        <TextView
+            android:id="@+id/tv_ubicacion_titulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/ultima_ubicacion"
+            android:textAppearance="?attr/textAppearanceLabelSmall"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            app:layout_constraintEnd_toEndOf="@id/tv_nombre"
+            app:layout_constraintStart_toStartOf="@id/tv_nombre"
+            app:layout_constraintTop_toBottomOf="@id/tv_estado" />
+
+        <TextView
+            android:id="@+id/tv_ubicacion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAppearance="?attr/textAppearanceBodyMedium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/tv_nombre"
+            app:layout_constraintStart_toStartOf="@id/tv_nombre"
+            app:layout_constraintTop_toBottomOf="@id/tv_ubicacion_titulo"
+            app:layout_constraintVertical_bias="0"
+            tools:text="Citadel of Ricks" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

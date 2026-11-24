@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Ejercicio 7 Retrofit</string>
+    <string name="titulo">Personajes de Rick and Morty</string>
+    <string name="subtitulo_total">%1$d personajes en la API</string>
+    <string name="ultima_ubicacion">Última ubicación conocida</string>
+    <string name="formato_estado_especie">%1$s · %2$s</string>
+    <string name="descripcion_foto">Imagen de %1$s</string>
+    <string name="estado_vivo">Vivo</string>
+    <string name="estado_muerto">Muerto</string>
+    <string name="estado_desconocido">Desconocido</string>
+    <string name="detalle_personaje">Estado: %1$s\nEspecie: %2$s\nGénero: %3$s\nOrigen: %4$s\nÚltima ubicación: %5$s</string>
+    <string name="error_conexion">No se pudo conectar con la API. Revisa tu conexión a Internet.</string>
+    <string name="error_siguiente_pagina">No se pudo cargar la siguiente página</string>
+    <string name="reintentar">Reintentar</string>
+    <string name="cerrar">Cerrar</string>
+</resources>
